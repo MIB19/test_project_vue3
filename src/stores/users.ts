@@ -35,7 +35,7 @@ export const useUsersStore = defineStore('users', {
           max_num = this.users[i].id
         }
       }
-      data.id = max_num
+      data.id = (max_num += 1)
       this.users.push(data)
       this.setLocalStorage(this.users)
     },
